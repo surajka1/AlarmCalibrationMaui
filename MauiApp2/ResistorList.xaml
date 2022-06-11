@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.ResistorList"
+             Title="NewPage1">
+    <ScrollView>
+    <Grid Margin="20" x:Name="maingrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <StackLayout Grid.Row="0">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Picker x:Name="AddORemoveRes" Grid.Row="0" Grid.Column="0" SelectedIndex="0" HorizontalTextAlignment="Center" >
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Add</x:String>
+                            <x:String>Remove</x:String>
+                        </x:Array>
+                    </Picker.ItemsSource>
+                </Picker>
+                <Label Text="Value:  " Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="End" VerticalTextAlignment="Center"/>
+                <Entry x:Name="InputResistorValue" Grid.Row="0" Grid.Column="2" Keyboard="Numeric" VerticalTextAlignment="End" HorizontalTextAlignment="Center"/>
+                <Label Text="Range:  " Grid.Row="0" Grid.Column="3" VerticalTextAlignment="Center" HorizontalTextAlignment="End"/>
+                <Picker x:Name="ResRangeSelect" Grid.Row="0" Grid.Column="4" SelectedIndex="1" HorizontalTextAlignment="Center">
+                    <Picker.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>E</x:String>
+                            <x:String>K</x:String>
+                        </x:Array>
+
+                    </Picker.ItemsSource>
+                </Picker>
+
+            </Grid>
+            <Grid HeightRequest="50" Margin="20">
+                <Button x:Name="SaveResistorValue" Text="Save" Margin="70,0" HeightRequest="50" Clicked="SaveResistorValue_Click"></Button>
+            </Grid>
+            <Grid Margin="20,0">
+                <Label x:Name="ResPageTextbox" HeightRequest="25"/>
+            </Grid>
+
+        </StackLayout>
+    
+        <!--<ScrollView Margin="30" VerticalOptions="StartAndExpand" Grid.Column="0" Grid.Row="1" VerticalScrollBarVisibility="Always" HorizontalOptions="Center" HeightRequest="500">-->
+            <StackLayout Grid.Row="1">
+
+                <Label x:Name="Textbox_AllResistorView" HorizontalTextAlignment="Center"/>
+
+            </StackLayout>
+        <!--</ScrollView>-->
+    </Grid>
+    </ScrollView>
+</ContentPage>
