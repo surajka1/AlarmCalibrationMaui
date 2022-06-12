@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.ResistorList"
-             Title="NewPage1">
+             Title="Resistor List">
     <ScrollView>
     <Grid Margin="20" x:Name="maingrid">
         <Grid.RowDefinitions>

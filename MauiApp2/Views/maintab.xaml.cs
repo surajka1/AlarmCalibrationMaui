@@ -1,4 +1,5 @@
 using MauiApp2.Models;
+using MauiApp2.ViewModels;
 
 namespace MauiApp2;
 
@@ -41,6 +42,9 @@ public partial class MainTab : ContentPage
 
         textBox_message.Text = String.Empty;
         textBox_message.TextColor = Colors.Red;
+
+        InputValidation inputValidation = ValueCalculation.ValidateInput(textBox_potvalue.Text, textBox_HigherOffset.Text, textBox_LowerOffset.Text, 1000);
+
         if (!long.TryParse(textBox_LowerOffset.Text, out lowerOffset))
         {
             textBox_message.Text = "Error parsing lower offset value!";
@@ -72,6 +76,8 @@ public partial class MainTab : ContentPage
             textBox_message.Text = "Too bad a POT to calculate the values.";
             return;
         }
+
+        DeviceDisplay.KeepScreenOn = true;
 
         long requiredResValue = 0;
 

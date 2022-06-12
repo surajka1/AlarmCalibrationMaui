@@ -84,10 +84,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="maintab.xaml.cs">
+	  <Compile Update="Views\maintab.xaml.cs">
 	    <DependentUpon>maintab.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="ResistorList.xaml.cs">
+	  <Compile Update="Views\ResistorList.xaml.cs">
 	    <DependentUpon>ResistorList.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="TabPage.xaml.cs">
@@ -96,11 +96,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="NewFolder\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="ResistorList.xaml">
+	  <MauiXaml Update="Views\ResistorList.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

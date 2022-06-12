@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mauiapp2="clr-namespace:MauiApp2"
             x:Class="MauiApp2.TabPage"
-             Title="NewPage1">
+             Title="Alarm Calibration Tool">
     <mauiapp2:MainTab Title="LVD/106"  />
     <mauiapp2:ResistorList Title="Rsistor List"/>
 </TabbedPage>

@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp2.MainTab"
-             Title="NewPage1">
+             Title="AL106/LVD Calibration">
     <ScrollView>
         <StackLayout>
             <Grid  Margin="10,10" HorizontalOptions="Center">
