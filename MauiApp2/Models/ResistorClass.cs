@@ -147,7 +147,7 @@ namespace MauiApp2.Models
         public bool validateStatus = false;
         public string? errorMessage = string.Empty;
         public long potMaxValue = 0;
-        public long potHigherOffset = 0;
+        public long potMaxValAtMark = 0;
         public long potLowerOffset = 0;
     }
 }

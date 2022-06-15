@@ -9,6 +9,8 @@ public partial class ResistorList : ContentPage
 		InitializeComponent();
         AddORemoveRes.SelectedIndex = 0;
         ResRangeSelect.SelectedIndex = 1;
+        InputResistorValue.PlaceholderColor = Colors.LightGray;
+        InputResistorValue.Placeholder = "Value";
         UpdateAllResistorsView();
     }
     public static readonly List<string> ResRange = new List<string>() { "E", "K" };
