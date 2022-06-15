@@ -11,7 +11,7 @@ namespace MauiApp2.ViewModels
 
     public class DisplayClass
     {
-        static System.Timers.Timer displayTimer = new System.Timers.Timer(30000);
+        static System.Timers.Timer displayTimer = new System.Timers.Timer(300000);
         public static void KeepDisplayOn()
         {
             Application.Current.Dispatcher.Dispatch(()=>
