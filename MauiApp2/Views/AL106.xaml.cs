@@ -12,8 +12,6 @@ public partial class MainTab : ContentPage
 	{
 		InitializeComponent();
 	}
-    //static System.Timers.Timer displayTimer = new System.Timers.Timer(300000);
-    //string boardSelection = string.Empty;
     ProductModel product;
 
     public void OnLVDSelected(object sender, EventArgs eventArgs)
@@ -46,7 +44,7 @@ public partial class MainTab : ContentPage
         textBox_message.Text = String.Empty;
         textBox_message.TextColor = Colors.Red;
 
-        InputValidation inputValidation = ValueCalculation.ValidateInput(LVDPageInput.textBox_potvalue.Text, LVDPageInput.textBox_HigherOffset.Text, LVDPageInput.textBox_LowerOffset.Text, 1000);
+        InputValidation inputValidation = ValueCalculation.ValidateInput(LVDPageInput.textBox_potvalue.Text, LVDPageInput.textBox_HigherOffset.Text, LVDPageInput.textBox_LowerOffset.Text, product.PotDefaultValue);
         textBox_message.Text = inputValidation.errorMessage;
         if (inputValidation.validateStatus is false)
         {
@@ -62,33 +60,9 @@ public partial class MainTab : ContentPage
 
         DisplayClass.KeepDisplayOn();
 
-        //displayTimer.Elapsed -= onDisplayTimerElapsed;
-        //displayTimer.Stop();
-        //displayTimer.Start();
-        //displayTimer.Elapsed += onDisplayTimerElapsed;
-#pragma warning disable CS0618 // Type or member is obsolete
-#pragma warning disable CS0612 // Type or member is obsolete
-        //Device.StartTimer(TimeSpan.FromSeconds(300), () =>
-        //{
-        //    DeviceDisplay.KeepScreenOn = false;
-        //    return false; // return true to repeat counting, false to stop timer
-        //});
-#pragma warning restore CS0612 // Type or member is obsolete
-#pragma warning restore CS0618 // Type or member is obsolete
 
         textBox_Output.Text = ValueCalculation.GetOutputValuesForDisplay(inputValidation, product);
-        //textBox_Output.Text += $"\r\n\r\nTotal Time required: {timer.ElapsedMilliseconds}ms";
-        //timer.Stop();
+
     }
 
-    //private void onDisplayTimerElapsed(object sender, ElapsedEventArgs e)
-    //{
-    //    Dispatcher.Dispatch(() =>
-    //    {
-    //        DeviceDisplay.KeepScreenOn = false;
-    //        displayTimer.Stop();
-    //    });
-    //    displayTimer.Elapsed -= onDisplayTimerElapsed;
-    //    //throw new NotImplementedException();
-    //}
 }

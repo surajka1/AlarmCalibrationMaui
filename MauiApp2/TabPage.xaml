@@ -2,8 +2,12 @@
 <TabbedPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:mauiapp2="clr-namespace:MauiApp2"
+            xmlns:Views="clr-namespace:MauiApp2.Views"
             x:Class="MauiApp2.TabPage"
              Title="Alarm Calibration Tool">
     <mauiapp2:MainTab Title="LVD/106"  />
+    
+    <Views:AL107 Title="AL107"/>
+    <Views:AL112 Title="AL112"/>
     <mauiapp2:ResistorList Title="Rsistor List"/>
 </TabbedPage>

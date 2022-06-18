@@ -104,8 +104,8 @@
 	  <Compile Update="Resources\ResourceDictionaries\InputResourceDic.xaml.cs">
 	    <DependentUpon>InputResourceDic.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\maintab.xaml.cs">
-	    <DependentUpon>maintab.xaml</DependentUpon>
+	  <Compile Update="Views\AL106.xaml.cs">
+	    <DependentUpon>AL106.xaml</DependentUpon>
 	  </Compile>
 	  <Compile Update="Views\ResistorList.xaml.cs">
 	    <DependentUpon>ResistorList.xaml</DependentUpon>
@@ -117,6 +117,12 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Resources\ResourceDictionaries\InputResourceDic.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AL107.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\AL112.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\ResistorList.xaml">

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp2.Views.AL107"
+             xmlns:input="clr-namespace:MauiApp2.Resources.ResourceDictionaries"
+             Title="AL107">
+    <ScrollView>
+    <StackLayout>
+            <Grid  Margin="10,10" HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="button_Bat" Text="Battery"  FontSize="18" FontAttributes="Bold" Clicked="OnBatSelected" Grid.Column="0" Grid.Row="0" WidthRequest="150"  BackgroundColor="LightGrey" Margin="0,0,50,0" />
+                <Button x:Name="button_Temp" Text="TemperatureMCP" FontSize="18" FontAttributes="Bold" Clicked="OnTempSelected" Grid.Column="1" Grid.Row="0" WidthRequest="150"  BackgroundColor="LightGrey"  />
+            </Grid>
+            <input:PresetInputField x:Name="AL107PageInput"/>
+            <Grid Margin="10,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label x:Name="textBox_message" Text="" HorizontalTextAlignment="Center" TextColor="Red">
+                </Label>
+            </Grid>
+            <Grid Margin="50,10" HeightRequest="40">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="button_go" Text="Go" FontSize="20" FontAttributes="Bold" HeightRequest="55" WidthRequest="150"  Clicked="OnGoClicked" CornerRadius="15"/>
+            </Grid>
+            <Grid Margin="10,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="textBox_Output" Text="" HorizontalTextAlignment="Start" FontSize="18" Margin="10,10"/>
+
+            </Grid>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

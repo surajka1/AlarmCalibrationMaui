@@ -9,7 +9,7 @@ public partial class ResistorList : ContentPage
 		InitializeComponent();
         AddORemoveRes.SelectedIndex = 0;
         ResRangeSelect.SelectedIndex = 1;
-        InputResistorValue.PlaceholderColor = Colors.LightGray;
+        //InputResistorValue.PlaceholderColor = Colors.LightGray;
         InputResistorValue.Placeholder = "Value";
         UpdateAllResistorsView();
     }
