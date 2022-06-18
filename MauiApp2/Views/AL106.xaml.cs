@@ -44,6 +44,12 @@ public partial class MainTab : ContentPage
         textBox_message.Text = String.Empty;
         textBox_message.TextColor = Colors.Red;
 
+        if (string.IsNullOrEmpty(product?.ProductName))
+        {
+            textBox_message.Text = "Select LVD / AL106 !";
+            return;
+        }
+
         InputValidation inputValidation = ValueCalculation.ValidateInput(LVDPageInput.textBox_potvalue.Text, LVDPageInput.textBox_HigherOffset.Text, LVDPageInput.textBox_LowerOffset.Text, product.PotDefaultValue);
         textBox_message.Text = inputValidation.errorMessage;
         if (inputValidation.validateStatus is false)
@@ -51,12 +57,6 @@ public partial class MainTab : ContentPage
             return;
         }
 
-        if (string.IsNullOrEmpty(product?.ProductName))
-        {
-            textBox_message.Text = "Select LVD / AL106 !";
-            return;
-        }
-        
 
         DisplayClass.KeepDisplayOn();
 

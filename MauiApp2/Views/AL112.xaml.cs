@@ -38,6 +38,12 @@ public partial class AL112 : ContentPage
         textBox_message.Text = String.Empty;
         textBox_message.TextColor = Colors.Red;
 
+        if (string.IsNullOrEmpty(product?.ProductName))
+        {
+            textBox_message.Text = "Select Battery / Temperature !";
+            return;
+        }
+
         InputValidation inputValidation = ValueCalculation.ValidateInput(AL112PageInput.textBox_potvalue.Text, AL112PageInput.textBox_HigherOffset.Text, AL112PageInput.textBox_LowerOffset.Text, product.PotDefaultValue);
         textBox_message.Text = inputValidation.errorMessage;
         if (inputValidation.validateStatus is false)
@@ -45,11 +51,7 @@ public partial class AL112 : ContentPage
             return;
         }
 
-        if (string.IsNullOrEmpty(product?.ProductName))
-        {
-            textBox_message.Text = "Select Battery / Temperature !";
-            return;
-        }
+
 
 
         DisplayClass.KeepDisplayOn();
